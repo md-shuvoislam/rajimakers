@@ -133,6 +133,16 @@ function rajimakers_scripts() {
 add_action( 'wp_enqueue_scripts', 'rajimakers_scripts' );
 
 /**
+ * TGM Activation
+ */
+require dirname( __FILE__ ) . '/inc/tgm/tgm-init.php';
+
+/**
+ * Theme Option.
+ */
+require get_template_directory() . '/inc/options-init_php.php';
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
