@@ -15,17 +15,20 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rajimakers' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rajimakers' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rajimakers' ), 'rajimakers', '<a href="https://a-web.org">A-WEB</a>' );
-				?>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<div class="footer-widget-inner">
+							<?php dynamic_sidebar( 'footer-1' ); ?>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 text-right">
+						<div class="footer-widget-inner">
+							<?php dynamic_sidebar( 'footer-2' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

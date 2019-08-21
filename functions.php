@@ -113,6 +113,25 @@ function rajimakers_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer One', 'rajimakers' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'rajimakers' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Two', 'rajimakers' ),
+		'id'            => 'footer-2',
+		'description'   => esc_html__( 'Add widgets here.', 'rajimakers' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	
 }
 add_action( 'widgets_init', 'rajimakers_widgets_init' );
 
@@ -128,7 +147,7 @@ function rajimakers_scripts() {
 	wp_enqueue_style('owl-theme', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css');
 	wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css');
 	wp_enqueue_style('slicknav', get_template_directory_uri() . '/assets/css/slicknav.min.css');
-	wp_enqueue_style('rajimakers-google-fonts', get_template_directory_uri() . '/assets/css/google-fonts.css');
+	wp_enqueue_style('rajimakers-google-fonts', get_template_directory_uri() . '/assets/fonts/helvetica.css');
 
 	wp_enqueue_style( 'rajimakers-style', get_stylesheet_uri() );
 
@@ -187,3 +206,51 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function rajimakers_custom_blog($atts)
+{
+
+// Attributes
+
+$atts = shortcode_atts(array(
+'posts_per_page' => 3,
+'cat' => '',
+'offset' => ''
+), $atts);
+
+$query = new WP_Query(array(
+'posts_per_page' => $atts['posts_per_page'],
+'offset' => $atts['offset'],
+'cat' => $atts['cat']
+
+));
+ob_start();
+if ($query->have_posts()) {
+?>
+<div class="rajimakers-blog-shortcode" > 
+    <div class="container">
+        <div class="row">
+            <?php while ($query->have_posts()): $query->the_post(); ?>
+            <div class="col-md-4">
+                <div class="single-blog">
+                    <a href="<?php the_permalink()?>">
+                        <?php 
+                        if ( has_post_thumbnail() ) { 
+                                the_post_thumbnail(); 
+                            }
+                        ?>  
+                    </a>
+                    <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h2>
+                    <p><?php the_content(); ?></p>
+                </div>
+            </div>
+            <?php
+            endwhile;
+            ?>
+        </div>  
+    </div>
+<?php wp_reset_query();?>
+</div><?php
+}
+return ob_get_clean();
+}
+add_shortcode('rajimakers-blog', 'rajimakers_custom_blog');

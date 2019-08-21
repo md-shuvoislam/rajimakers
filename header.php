@@ -22,37 +22,78 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'rajimakers' ); ?></a>
+	<div class="page-banner-hero hasbg">
+		<header id="masthead" class="site-header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="site-branding">
+							<?php the_custom_logo(); ?>
+						</div><!-- .site-branding -->
+					</div>
+					<div class="col-md-5">
+						<nav id="site-navigation" class="main-navigation">
+							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" data-toggle="collapse" data-target="#primary-menu" aria-expanded="false" ><?php esc_html_e( 'Primary Menu', 'sandhas' ); ?></button>
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								) );
+							?>
+						</nav><!-- #site-navigation -->
+					</div>
+					<div class="col-md-3 text-right">
+						<div class="search-container">
+						      <?php get_search_form(); ?>
+						  </div>
+					</div>
+				</div>
+			</div>
+		</header><!-- #masthead -->
+			
+	</div>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$rajimakers_description = get_bloginfo( 'description', 'display' );
-			if ( $rajimakers_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $rajimakers_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rajimakers' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
+	<div class="header-category">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-1.png" alt="" />
+						<p>Inschrijven</p>
+					</a>
+				</div>
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-2.png" alt="" />
+						<p>Moet ik naar de dokter?</p>
+					</a>
+				</div>
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-3.png" alt="" />
+						<p>Afspraak maken (zonder inloggen)</p>
+					</a>
+				</div>
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-4.png" alt="" />
+						<p>Wat kan ik doen? (Thuisarts.nl)</p>
+					</a>
+				</div>
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-5.png" alt="" />
+						<p>Herhaal recept</p>
+					</a>
+				</div>
+				<div class="col-md-2">
+					<a href="#">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-6.png" alt="" />
+						<p>Spoed telefoon</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<div id="content" class="site-content">
