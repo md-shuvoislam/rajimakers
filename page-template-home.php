@@ -14,13 +14,13 @@ get_header();
 		?>
 	</div>
 
-	<div class="recent-post-slider">
+	<div class="recent-post-slider section-padding">
 			<?php 
 				echo do_shortcode('[rajimakers-blog]');
 			?>
 	</div>
 
-	<div class="thuistar-nl-area">
+	<div class="thuistar-nl-area section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
@@ -43,7 +43,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="mijngezondheid-area">
+	<div class="mijngezondheid-area section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -65,7 +65,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="thuistar-nl-area">
+	<div class="thuistar-nl-area section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">

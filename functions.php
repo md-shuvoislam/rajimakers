@@ -74,8 +74,8 @@ if ( ! function_exists( 'rajimakers_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 374,
+			'width'       => 309,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -232,15 +232,35 @@ if ($query->have_posts()) {
             <?php while ($query->have_posts()): $query->the_post(); ?>
             <div class="col-md-4">
                 <div class="single-blog">
-                    <a href="<?php the_permalink()?>">
+                    <a href="<?php the_permalink('custom-logo')?>">
                         <?php 
                         if ( has_post_thumbnail() ) { 
                                 the_post_thumbnail(); 
                             }
                         ?>  
                     </a>
-                    <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h2>
-                    <p><?php the_content(); ?></p>
+                   	<div class="blog-content">
+                   		 <div class="post-meta">
+						<?php $user = wp_get_current_user(); if ( $user ) : ?>
+							<img src="<?php echo esc_url( get_avatar_url( $user->ID, array('size'=>30) ) ); ?>" />
+						<?php endif; ?><span><?php the_author(); ?>-</span>
+						<span><?php echo get_the_date(); ?></span>
+						</div>
+	                    <p><?php the_excerpt(); ?></p>
+                   	</div>
+                    
+                </div>
+                <div class="row blog-social">
+                	<div class="col-md-6">
+                		<h4>Deel dit bericht:</h4>
+                	</div>
+                	<div class="col-md-6 text-right">
+                		<ul>
+                			<li><a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>"><i class="fa fa-facebook"></i></a></li>
+                			<li><a href="https://twitter.com/intent/tweet?url=<?php the_permalink();?>"><i class="fa fa-twitter"></i></a></li>
+                			<li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                		</ul>
+                	</div>
                 </div>
             </div>
             <?php

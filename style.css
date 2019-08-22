@@ -727,7 +727,9 @@ a:hover, a:active {
 }
 
 /* footer css */
-
+.section-padding{
+	padding:70px 0px; 
+}
 .footer-social ul {
   margin: 0;
   padding: 0;
@@ -738,19 +740,74 @@ a:hover, a:active {
   float: left;
 }
 .widget_nav_menu ul {
-  margin: 0;
+  margin: 70px 0 0 0;
   padding: 0;
   list-style: none;
   float: right;
 }
 .widget_nav_menu ul li {
   float: left;
+  border-right: 1px solid #fff;
+}
+.widget_nav_menu ul li:hover a {
+    color: #18e7d6;
+    transition: .5s;
+}
+.widget_nav_menu ul li:last-child a {
+    padding-right: 0px;
+}
+.widget_nav_menu ul li:last-child {
+    border-right: none;
+}
+.widget_nav_menu ul li a {
+    display: inline-block;
+    color: #fff;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    padding-right: 15px;
 }
 .site-info {
 	background: #000;
 	color: #fff;
 	padding: 40px 0;
 }
+.footer-widget-inner h2 {
+    font-size: 21px;
+    color: #fff;
+    font-weight: 700;
+}
+.footer-widget-inner p {
+    font-size: 16px;
+    padding-top: 70px;
+}
+.footer-social ul li {
+    width: 47px;
+    height: 47px;
+    border: 2px solid #707070;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50px;
+    margin-left: 7px;
+}
+.footer-social ul li a {
+    color: #707070;
+    font-size: 20px;
+    display: block;
+    line-height: 2;
+}
+.footer-social li:hover {
+    background: #21c8bd;
+    border-color: #21c8bd;
+    transition: .5s;
+}
+.footer-social li:hover a {
+    color: #fff;
+}
+.footer-social {
+    padding-top: 10px;
+}
+/* header area  */
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
@@ -794,4 +851,118 @@ a:hover, a:active {
 .header-category {
 	background: #21c8bd;
 	padding-top: 20px;
+}
+
+/* section css */
+.thuistar-nl-area{
+	background-color: #eee;
+}
+.thuistar-nl-area h2, .mijngezondheid-area h2 {
+    color: #000000;
+    font-size: 42px;
+    font-weight: 700;
+}
+.thuistar-nl-area h4, .mijngezondheid-area h4 {
+    font-size: 22px;
+    color: #575756;
+    padding-bottom: 10px;
+}
+.thuistar-nl-area p, .mijngezondheid-area p {
+    font-size: 16px;
+    color: #575756;
+}
+.thuistar-nl-area p span, .mijngezondheid-area p span {
+    font-weight: 700;
+    color: #575756;
+    font-style: italic;
+}
+.mijngezondheid-area p {
+    width: 67%;
+}
+.website-go a {
+    text-decoration: none;
+    background: #21c8bd;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 20px;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    margin-top: 30px;
+}
+.mijngezondheid-area img {
+    margin-top: 30px;
+}
+.website-search input {
+    width: 89%;
+    color: #575756;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+}
+.website-search button {
+    background: #21c8bd;
+    color: #fff;
+    padding: 13px 42px;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.75);
+    border: none;
+    border-radius: 0;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+
+/* blog css */
+.post-meta span {
+    font-size: 12px;
+    color: #219293;
+}
+.blog-content {
+    padding: 10px;
+}
+.blog-content p {
+    font-size: 16px;
+    color: #575756;
+}
+.blog-social {
+    padding: 20px 10px 10px 10px;
+}
+.blog-content {
+    padding: 10px;
+    width: 348px;
+    -webkit-box-shadow: 1px 5px 12px 1px rgba(0,0,0,0.33);
+    -moz-box-shadow: 1px 5px 12px 1px rgba(0,0,0,0.33);
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.33);
+}
+.blog-social h4 {
+    font-size: 16px;
+    color: #210000;
+    font-weight: 700;
+}
+.blog-social ul {
+    margin: 0;
+    padding: 0;
+    float: right;
+    list-style: none;
+}
+.blog-social ul li {
+    float: left;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background: #000;
+    margin-left: 5px;
+}
+.blog-social ul li:hover{
+	background: #21c8bd;
+	transition: .5s;
+}
+.blog-social ul li a {
+    color: #fff;
+    line-height: 2.3;
 }
