@@ -229,10 +229,11 @@ if ($query->have_posts()) {
 <div class="rajimakers-blog-shortcode" > 
     <div class="container">
         <div class="row">
+        	<?php echo '<div class="owl-carousel blog-slider owl-theme">'; ?>
             <?php while ($query->have_posts()): $query->the_post(); ?>
             <div class="col-md-4">
                 <div class="single-blog">
-                    <a href="<?php the_permalink('custom-logo')?>">
+                    <a href="<?php the_permalink()?>">
                         <?php 
                         if ( has_post_thumbnail() ) { 
                                 the_post_thumbnail(); 
@@ -266,6 +267,7 @@ if ($query->have_posts()) {
             <?php
             endwhile;
             ?>
+            <?php echo '</div>'; ?>
         </div>  
     </div>
 <?php wp_reset_query();?>

@@ -3,14 +3,14 @@
 
     $(document).ready(function() {  
 
-        var offersSlider = $('.offers-slider');
+        var offersSlider = $('.blog-slider');
         offersSlider.owlCarousel({
             loop:1,
             margin:10,
             nav:true,
             dots: false,
             items: 3,
-            autoplay:1,
+            autoplay:0,
             autoplayTimeout:3000,
                 responsive:{
                 0:{
