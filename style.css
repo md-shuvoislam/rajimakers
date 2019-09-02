@@ -390,6 +390,8 @@ template {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&display=swap');
+
 body,
 button,
 input,
@@ -397,7 +399,7 @@ select,
 optgroup,
 textarea {
 	color: #404040;
-	font-family: 'Helvetica';
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -425,7 +427,6 @@ address {
 
 pre {
 	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -436,7 +437,6 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -699,7 +699,7 @@ a:hover, a:active {
 .site-info {
 	background: #000;
 	color: #fff;
-	padding: 40px 0;
+	padding: 30px 0 0 0;
 }
 .footer-widget-inner h2 {
     font-size: 21px;
@@ -745,24 +745,25 @@ a:hover, a:active {
 	color: #000;
 }
 .page-banner-hero {
-	background: #e3e3e3;
+	background: #fff;
 	padding: 20px 0;
 }
 .search-container {
-    margin-top: 30px;
+    margin-top: 25px;
     position: relative;
     left: -45px;
 }
 .search-container input {
     padding: 5px;
-    background: #e3e3e3;
+    background: #fff;
     border: 1px solid #888787;
     width: 100%;
     position: relative;
+    font-size: 14px;
 }
 .search-container button {
     float: right;
-    padding: 5px 10px;
+    padding: 3px 10px;
     margin-top: 0px;
     background: #21c6a2;
     font-size: 17px;
@@ -787,9 +788,12 @@ a:hover, a:active {
 	color: #fff;
 	font-size: 18px;
 }
+.header-category p {
+    font-size: 15px;
+}
 .header-category {
 	background: #21c8bd;
-	padding-top: 20px;
+	padding-top: 30px;
 }
 
 /* section css */
@@ -857,6 +861,9 @@ a:hover, a:active {
 
 
 /* blog css */
+.recent-post-slider.section-padding {
+    padding: 70px 0 50px 0;
+}
 .post-meta span {
     font-size: 12px;
     color: #219293;
@@ -957,4 +964,260 @@ a:hover, a:active {
 .owl-theme .owl-nav [class*=owl-]:focus {
 	outline: 0px auto;
     outline: 0px auto -webkit-focus-ring-color;
+}
+
+
+/* contact page */
+.cotact-content h2 {
+    font-size: 42px;
+    font-weight: 300;
+    color: #000;
+}
+.cotact-content h2 strong {
+    font-weight: 700;
+    color: #000;
+}
+.cotact-content p {
+    font-size: 16px;
+    color: #575756;
+}
+.cotact-content strong {
+    color: #009f88;
+}
+.mapsection h3 {
+    font-size: 21px;
+    color: #000;
+}
+
+.mapsection p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.mapsection h3:first-child {
+    color: #219293;
+    font-weight: 700;
+}
+.mapsection {
+    padding: 30px 10px 10px 10px;
+    border: 1px solid #a1a1a1;
+    margin-bottom: 30px;
+}
+.wpgmp_map_container {
+    margin-top: 30px;
+}
+.theme-sidebar h2 {
+    font-size: 24px;
+    background: #21c8bd;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 30px;
+}
+.widget-quick-link ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.widget-addresss ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.theme-sidebar {
+    padding: 40px 20px;
+    border: 1px solid #a1a1a1;
+}
+.widget-quick-link, .widget-addresss{
+    padding: 20px;
+}
+.recent-posts-widget-with-thumbnails ul{
+	padding: 20px;
+}
+.recent-posts-widget-with-thumbnails ul li a{
+	color: #000;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+}
+.widget-quick-link li a {
+    color: #000;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.widget-quick-link li{
+    padding: 10px 0;
+    transition: .5s;
+    font-weight: 700;
+}
+
+.widget-quick-link li img {
+    padding-right: 15px;
+}
+.widget-addresss li{
+	font-size: 16px;
+}
+.widget-addresss li span{
+	font-weight: 700;
+	display: block;
+}
+.widget-addresss li img {
+    float: left;
+    padding-right: 15px;
+}
+.widget-quick-link li:hover a {
+    color: #219293;
+    transition: .5s;
+}
+
+@media only screen and (min-width: 1800px) and (max-width: 1920px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+	.single-blog {
+		width: 344px;
+		margin: 0 auto;
+	}
+	.owl-prev {
+		left: 2%;
+	}
+	.owl-next {
+		right: 2%;
+	}
+	.website-search input {
+		width: 86%;
+	}
+	.website-search button {
+		padding: 8px 42px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.blog-content {
+		width: 322px;
+	}
+	.website-search input {
+		width: 82%;
+	}
+	.widget_nav_menu ul {
+		margin: 70px 0 0 0;
+	}
+	.widget_nav_menu ul li a {
+		padding-right: 14px;
+	}
+	.footer-social ul li a {
+		line-height: 1.68;
+	}
+	.footer-social ul li{
+		width: 40px;
+		height: 40px;
+	}
+	.website-search button {
+		padding: 8px 42px;
+	}
+	.search-container {
+		left: 0;
+	}
+	.search-container button {
+		right: 0;
+	}
+	.search-container {
+		margin-top: 0px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+
+	.menu-toggle, .main-navigation.toggled ul {
+	    display: block;
+	    margin: 20px auto;
+	    background: #27d9ca;
+		color: #fff;
+		border-color: #27d9ca;
+	}
+	.main-navigation li {
+	    float: none;
+	    position: relative;
+	    display: table;
+	    margin: 0 auto;
+	}
+	.main-navigation a {
+	    padding: 0;
+	}
+	.search-container {
+	    left: 0;
+	}
+	.search-container button {
+	    right: 0;
+	}
+	.single-blog {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.blog-social {
+	    padding: 20px 10px 10px 60px;
+	    display: inline-block;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	.owl-prev {
+	    top: 100% !important;
+	    left: 83%;
+	}
+	.owl-next {
+	    top: 100% !important;
+	    right: 3% !important;
+	}
+	.blog-social ul li:first-child {
+	    margin-left: 0;
+	}
+	.thuistar-nl-area h2, .mijngezondheid-area h2 {
+	    font-size: 25px;
+	}
+	.website-search input {
+	    width: 72%;
+	}
+	.website-search button {
+	    padding: 8px 21px;
+	}
+	.website-search {
+	    margin-top: 30px;
+	}
+	.site-branding img, .footer-widget-inner img {
+	    text-align: center;
+	    max-width: 100%;
+	    display: table;
+	    margin: 0 auto;
+	}
+	.footer-widget-inner h2 {
+	    text-align: left;
+	}
+	.footer-social ul li a {
+		line-height: 1.7;
+	}
+	.footer-social ul li {
+		width: 40px;
+		height: 40px;
+	}
+	.footer-social ul li:first-child{
+		margin-left: 0px;
+	}
+	.footer-social {
+		float: left;
+	}
+	.widget_nav_menu ul {
+		margin: 40px 0 30px 0;
+		float: left;
+	}
+	.thuistar-nl-area img, .mijngezondheid-area img{
+		text-align: center;
+		display: block;
+	}
+	.blog-content {
+		max-width: 100%;
+	}
+	.mijngezondheid-area p {
+		width: 100%;
+	}
 }

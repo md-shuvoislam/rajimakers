@@ -148,6 +148,7 @@ function rajimakers_scripts() {
 	wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css');
 	wp_enqueue_style('slicknav', get_template_directory_uri() . '/assets/css/slicknav.min.css');
 	wp_enqueue_style('rajimakers-google-fonts', get_template_directory_uri() . '/assets/fonts/helvetica.css');
+	wp_enqueue_style('roboto-fonts', 'https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i,900&display=swap');
 
 	wp_enqueue_style( 'rajimakers-style', get_stylesheet_uri() );
 
