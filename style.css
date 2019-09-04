@@ -617,7 +617,91 @@ a:hover, a:active {
 	display: block;
 	text-decoration: none;
 }
-
+.main-navigation .current-menu-item>a, .main-navigation .current_page_item>a {
+    border-bottom: 4px solid #8c8c8c;
+}
+.main-navigation li:hover a {
+    border-bottom: 4px solid #8c8c8c;
+}
+.media-box-container {
+    border: 1px solid #a1a1a1;
+    border-radius: 0;
+    -moz-border-radius: 0;
+}
+.media-box-image .media-box-fill-height[data-width][data-height] img {
+    top: 0 !important;
+    left: 0% !important;
+    right: 0% !important;
+    bottom: 0 !important;
+    min-width: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 100%;
+    padding: 20px !important;
+    -moz-padding: 20px !important;
+    background: #ffff;
+}
+.media-box-image div[data-width][data-height] img {
+	margin-bottom: auto !important;
+	padding: 20px !important;
+	background: #fff;
+}
+.media-boxes-filter {
+    margin-bottom: 40px;
+    border: 1px solid #a1a1a1;
+}
+.media-boxes-filter>li {
+    margin: 0 8px 0 0 !important;
+    border-right: 1px solid #a1a1a1;
+}
+.media-boxes-filter>li:last-child {
+    border-right: 0px solid #a1a1a1;
+}
+.media-boxes-filter>li a {
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    vertical-align: top;
+    border: 0px solid #a1a1a1 !important;
+    display: block;
+    cursor: pointer;
+    color: #219293;
+    font-size: 17px;
+    height: 34px;
+    line-height: 33px;
+    text-decoration: none;
+    margin: 0px;
+    padding: 5px 15px;
+    background-color: #fff;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-transition: background-color .1s;
+    -moz-transition: background-color .1s;
+    -o-transition: background-color .1s;
+    -ms-transition: background-color .1s;
+    transition: background-color .1s;
+    font-style: italic;
+}
+.media-boxes-filter>li a:hover {
+    text-decoration: none;
+    background: transparent;
+    color: #21c8bd;
+}
+.media-boxes-filter>li a.selected {
+    background: transparent !important;
+    color: #000!important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none !important;
+     box-shadow: inset 0 0px 0 rgba(0,0,0,0.15) !important;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+}
+.media-boxes-filters-container.drop_zone_2 {
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -741,12 +825,12 @@ a:hover, a:active {
 	display: inline-block;
 	text-decoration: none;
 	font-size: 18px;
-	padding: 30px 10px;
+	padding: 30px 10px 50px 10px;
 	color: #000;
 }
 .page-banner-hero {
 	background: #fff;
-	padding: 20px 0;
+	padding: 20px 0 0 0;
 }
 .search-container {
     margin-top: 25px;
@@ -968,10 +1052,14 @@ a:hover, a:active {
 
 
 /* contact page */
+.mapsection.mapsection-two {
+    margin-bottom: 0;
+}
 .cotact-content h2 {
     font-size: 42px;
     font-weight: 300;
     color: #000;
+    margin-top: 20px;
 }
 .cotact-content h2 strong {
     font-weight: 700;
@@ -990,7 +1078,7 @@ a:hover, a:active {
 }
 
 .mapsection p {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
 }
 
@@ -1070,6 +1158,64 @@ a:hover, a:active {
     color: #219293;
     transition: .5s;
 }
+.mran-default .mran-accordion-title {
+	position: relative;
+	display: block;
+	color: #000;
+	padding: 10px 0 10px 1em;
+	margin: 0;
+	background: #fff;
+	font-weight: 400;
+	line-height: 1.4em;
+	cursor: pointer;
+	box-shadow: none;
+}
+.mran-default .mran-accordion-title:hover, .mran-default .mran-accordion-title.current {
+	box-shadow: none;
+	background: #fff;
+	color: #000;
+}
+.mran-default .mran-accordion-item-wrap {
+	padding: 0;
+	position: relative;
+	margin: 0 0 1px;
+	overflow: hidden;
+	border-bottom: 1px solid #f2f2f2;
+}
+.mran-accordion .mran-content-wraper {
+	padding: 10px;
+	color: #000;
+	background: #fff;
+	border-bottom: 1px solid #f2f2f2 !important;
+}
+.mran-default .mran-accordion-list {
+	border-bottom: 0px solid #dedede;
+}
+.mran-toggle-icon {
+    height: 100%;
+    width: 30px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: inherit;
+    text-align: center;
+    font-size: 1.5em;
+    background: #000;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    max-height: 29px;
+    border-left: 0px solid #dedede;
+    color: #fff;
+    margin-top: 5px;
+}
+.mran-accordion.vertical .mran-accordion-title {
+	padding: 5px 40px 10px 40px;
+}
+.mran-accordion-template.mran-shortcode.mran-default {
+	padding: 20px;
+}
 
 @media only screen and (min-width: 1800px) and (max-width: 1920px) {}
 
@@ -1090,10 +1236,22 @@ a:hover, a:active {
 	.website-search button {
 		padding: 8px 42px;
 	}
+	.wpgmp_map {
+		width: 600px !important;
+	}
+	.media-boxes-filter > li a {
+		padding: 5px 7px;
+	}
 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+	.media-boxes-filter > li a {
+		padding: 5px 7px;
+	}
+	.wpgmp_map {
+		width: 700px !important;
+	}
 	.blog-content {
 		width: 322px;
 	}
@@ -1125,10 +1283,45 @@ a:hover, a:active {
 	.search-container {
 		margin-top: 0px;
 	}
+	.search-container {
+	    margin-bottom: 25px;
+	}
+	.main-navigation .current-menu-item>a, .main-navigation .current_page_item>a {
+	    border-bottom: 0px solid #8c8c8c;
+	}
+	.main-navigation li:hover a {
+	    border-bottom: 0px solid #8c8c8c;
+	}
+	.theme-sidebar {
+		margin-top: 40px;
+	}
+	.cotact-content h2 {
+		font-size: 35px;
+	}
 }
 
 @media only screen and (max-width: 767px) {
-
+	.media-boxes-filter > li {
+		border: 0px solid #a1a1a1;
+	}
+	.cotact-content h2 {
+		font-size: 25px;
+	}
+	.mapsection {
+		margin: 0px 0 40px 0;
+	}
+	.wpgmp_map {
+		width: 400px !important;
+	}
+	.theme-sidebar {
+		margin-top: 40px;
+	}
+	.main-navigation .current-menu-item>a, .main-navigation .current_page_item>a {
+	    border-bottom: 0px solid #8c8c8c;
+	}
+	.main-navigation li:hover a {
+	    border-bottom: 0px solid #8c8c8c;
+	}
 	.menu-toggle, .main-navigation.toggled ul {
 	    display: block;
 	    margin: 20px auto;
@@ -1147,6 +1340,7 @@ a:hover, a:active {
 	}
 	.search-container {
 	    left: 0;
+	    margin-bottom: 25px;
 	}
 	.search-container button {
 	    right: 0;
