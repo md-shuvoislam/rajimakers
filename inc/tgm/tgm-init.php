@@ -17,13 +17,6 @@ function ss_opt_register_required_plugins() {
 			'force_activation'   => false,
 		),
 		array(
-			'name'               => 'WPBakery Page Builder',
-			'slug'               => 'js_composer',
-			'source'             => dirname( __FILE__ ) . '/plugins/js_composer.zip',
-			'required'           => true,
-			'force_activation'   => false,
-		), 
-		array(
 			'name' 	   => 'Contact Form 7',
 			'slug' 	   => 'contact-form-7',
 			'required' => true,
